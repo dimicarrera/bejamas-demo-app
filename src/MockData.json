@@ -1,0 +1,567 @@
+{
+	"products": [
+		{
+			"name": "Red Bench",
+			"category": "people",
+			"price": 3.89,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": true,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Egg Balloon",
+			"category": "food",
+			"price": 93.89,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Man",
+			"category": "people",
+			"price": 100,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Architecture",
+			"category": "landmarks",
+			"price": 101,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Eggs 2",
+			"category": "food",
+			"price": 193.89,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Iron Man 2",
+			"category": "people",
+			"price": 100,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Architecture Two",
+			"category": "landmarks",
+			"price": 101.43,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Egg 3: Eggg",
+			"category": "food",
+			"price": 33.9,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Iron Man 3",
+			"category": "people",
+			"price": 100.4,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Architecture 3: Revolutions",
+			"category": "landmarks",
+			"price": 42,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Egg Related",
+			"category": "food",
+			"price": 293.89,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Mano 4",
+			"category": "people",
+			"price": 200,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Architecture of Prague",
+			"category": "cities",
+			"price": 101,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "OMG not the eggs again",
+			"category": "food",
+			"price": 43.39,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Jackson 5",
+			"category": "people",
+			"price": 300,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Architecture of Prague, but better",
+			"category": "cities",
+			"price": 101.01,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Egg Balloon 6: Return of the Yolk",
+			"category": "food",
+			"price": 1983,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Oh Man, it's 6 o'clock",
+			"category": "nature",
+			"price": 100,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Forest Inspired Software Architecture",
+			"category": "nature",
+			"price": 161,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Eggs 7: Oh Look It's Another Egg",
+			"category": "food",
+			"price": 493.89,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Man, what a photo!",
+			"category": "people",
+			"price": 1000,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Bee Hive: The Pinnacle of Nature Architecture",
+			"category": "nature",
+			"price": 321,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "The Fate of the Eggs",
+			"category": "food",
+			"price": 393.69,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Man of Steel",
+			"category": "people",
+			"price": 240,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Intel Chip Architecture",
+			"category": "premium",
+			"price": 1010,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Eggcelent Picture",
+			"category": "premium",
+			"price": 493.89,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "A Man with a Van",
+			"category": "people",
+			"price": 220,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "This is not about Architecture",
+			"category": "landmarks",
+			"price": 501,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Eggcitement",
+			"category": "food",
+			"price": 213.09,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Ben 10",
+			"category": "people",
+			"price": 1000,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Farchitecture — the designs of buildings far away",
+			"category": "landmarks",
+			"price": 101,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Enough with the egg puns",
+			"category": "premium",
+			"price": 793.11,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Ocean's 11",
+			"category": "people",
+			"price": 1100,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Archery!",
+			"category": "premium",
+			"price": 1011,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Eggscuse me, here's another one",
+			"category": "food",
+			"price": 493.49,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Men in Black",
+			"category": "people",
+			"price": 520,
+			"currency": "USD",
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "This is the last one",
+			"category": "cities",
+			"price": 701,
+			"currency": "USD",
+			"dimensions": {
+				"width": 1020,
+				"height": 1020
+			},
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": false,
+			"details": null
+		},
+		{
+			"name": "Samurai King Restling",
+			"category": "landmarks",
+			"price": 101,
+			"currency": "USD",
+      "dimensions": {
+        "width": 1020,
+        "height": 1020
+      },
+			"image": {
+				"src": "",
+				"alt": ""
+			},
+			"bestseller": false,
+			"featured": true,
+			"details": {
+				"size": 15000,
+				"description": "So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely",
+				"recommendations": [
+					{
+						"src": "",
+						"alt": ""
+					},
+					{
+						"src": "",
+						"alt": ""
+					},
+					{
+						"src": "",
+						"alt": ""
+					}
+				]
+			}
+		}
+	]
+}
