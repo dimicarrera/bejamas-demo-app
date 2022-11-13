@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import Layout from "./components/Layout/Layout";
-import Header from './components/Layout/Header'
+import Header from "./components/Layout/Header";
+
+import { DataContext } from "./context/DataContext";
 
 function App() {
-	return (
+	// const { items } = useContext(DataContext);
+
+  return (
 		<Layout>
 			<Header />
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic iste
-				deserunt totam. Laborum error asperiores ex magni illum provident.
-				Explicabo, maxime laborum minus nostrum dicta cumque nisi et doloremque
-				sed!
-			</p>
-			{/* Featured */}
+      {/* todo: display a featured product */}
+      {/* Featured */}
+      {/* todo: display a list component with sorting, filtering and pagination dependant on state */}
 			{/* MainList */}
 		</Layout>
 	);

@@ -7,7 +7,7 @@ import logo from "../../images/logo.png";
 const Header = () => {
 	return (
 		<>
-			<header className="flex justify-between">
+			<header className="flex justify-between border-b-gray-300 border-b-4 py-4">
 				<img
 					src={logo}
 					alt="Bejamas Website Logo"
@@ -15,12 +15,6 @@ const Header = () => {
 				/>
 				<Cart />
 			</header>
-			<hr
-				style={{
-					width: 4,
-					color: "#e4e4e4",
-				}}
-			/>
 		</>
 	);
 };

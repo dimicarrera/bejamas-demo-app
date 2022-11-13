@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Layout = ({children}: {children: React.ReactNode}) => {
+const Layout = ({children}: {children: React.ReactNode | React.ReactNode[]}) => {
   return (
-    <div className='container mx-auto py-4'>
+    <div className="container mx-auto">
       {children}
     </div>
   )
