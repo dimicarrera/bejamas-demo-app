@@ -6,8 +6,8 @@
 			"price": 3.89,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1223649/pexels-photo-1223649.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+				"alt": "some dummy text"
 			},
 			"bestseller": true,
 			"featured": false,
@@ -19,8 +19,8 @@
 			"price": 93.89,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1153369/pexels-photo-1153369.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -32,8 +32,8 @@
 			"price": 100,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1172253/pexels-photo-1172253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -49,8 +49,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -62,8 +62,8 @@
 			"price": 193.89,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/62689/pexels-photo-62689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -75,8 +75,8 @@
 			"price": 100,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -92,8 +92,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1034940/pexels-photo-1034940.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -105,8 +105,8 @@
 			"price": 33.9,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/610293/pexels-photo-610293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -118,8 +118,8 @@
 			"price": 100.4,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1019771/pexels-photo-1019771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -135,8 +135,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1128318/pexels-photo-1128318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -148,8 +148,8 @@
 			"price": 293.89,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1005417/pexels-photo-1005417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -161,8 +161,8 @@
 			"price": 200,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1020016/pexels-photo-1020016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -178,8 +178,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -191,8 +191,8 @@
 			"price": 43.39,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1047051/pexels-photo-1047051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -204,8 +204,8 @@
 			"price": 300,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/235922/pexels-photo-235922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -221,8 +221,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/920384/pexels-photo-920384.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -234,8 +234,8 @@
 			"price": 1983,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/2857583/pexels-photo-2857583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -247,8 +247,8 @@
 			"price": 100,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/2041832/pexels-photo-2041832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -264,8 +264,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1524232/pexels-photo-1524232.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -277,8 +277,8 @@
 			"price": 493.89,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/733852/pexels-photo-733852.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -290,8 +290,8 @@
 			"price": 1000,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/173301/pexels-photo-173301.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -307,8 +307,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1550913/pexels-photo-1550913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -320,8 +320,8 @@
 			"price": 393.69,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1223648/pexels-photo-1223648.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -333,8 +333,8 @@
 			"price": 240,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1683975/pexels-photo-1683975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -350,8 +350,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -363,8 +363,8 @@
 			"price": 493.89,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/326259/pexels-photo-326259.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -376,8 +376,8 @@
 			"price": 220,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1449667/pexels-photo-1449667.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -393,8 +393,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1005456/pexels-photo-1005456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -406,8 +406,8 @@
 			"price": 213.09,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/347135/pexels-photo-347135.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -419,8 +419,8 @@
 			"price": 1000,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1250643/pexels-photo-1250643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -436,8 +436,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1251862/pexels-photo-1251862.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -449,8 +449,8 @@
 			"price": 793.11,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1546329/pexels-photo-1546329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -462,8 +462,8 @@
 			"price": 1100,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/2409681/pexels-photo-2409681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -479,8 +479,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -492,8 +492,8 @@
 			"price": 493.49,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/254069/pexels-photo-254069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -505,8 +505,8 @@
 			"price": 520,
 			"currency": "USD",
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/610294/pexels-photo-610294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -522,8 +522,8 @@
 				"height": 1020
 			},
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/1001850/pexels-photo-1001850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": false,
@@ -539,8 +539,8 @@
         "height": 1020
       },
 			"image": {
-				"src": "",
-				"alt": ""
+				"src": "https://images.pexels.com/photos/8974502/pexels-photo-8974502.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+				"alt": "some dummy text"
 			},
 			"bestseller": false,
 			"featured": true,
@@ -549,16 +549,16 @@
 				"description": "So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely",
 				"recommendations": [
 					{
-						"src": "",
-						"alt": ""
+						"src": "https://images.pexels.com/photos/9143497/pexels-photo-9143497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+						"alt": "some dummy text"
 					},
 					{
-						"src": "",
-						"alt": ""
+						"src": "https://images.pexels.com/photos/6945907/pexels-photo-6945907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+						"alt": "some dummy text"
 					},
 					{
-						"src": "",
-						"alt": ""
+						"src": "https://images.pexels.com/photos/8230973/pexels-photo-8230973.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+						"alt": "some dummy text"
 					}
 				]
 			}
