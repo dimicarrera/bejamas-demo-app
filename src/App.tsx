@@ -1,12 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 
 import Layout from "./components/Layout/Layout";
 import Header from "./components/Layout/Header";
+import MainList from "./components/Layout/MainList/MainList";
 
-import { DataContext } from "./context/DataContext";
 
 function App() {
-	// const { items } = useContext(DataContext);
 
   return (
 		<Layout>
@@ -14,7 +13,7 @@ function App() {
       {/* todo: display a featured product */}
       {/* Featured */}
       {/* todo: display a list component with sorting, filtering and pagination dependant on state */}
-			{/* MainList */}
+			<MainList />
 		</Layout>
 	);
 }
