@@ -7,7 +7,7 @@ const MainListFiltering = ({ products }: MainListProps) => {
 		new Set(products?.map((product) => product.category))
 	);
 	return (
-		<>
+		<div className="flex flex-col">
 			<div>
 				<h4>Category</h4>
 				{uniqueCategories?.map((cat) => (
@@ -51,7 +51,7 @@ const MainListFiltering = ({ products }: MainListProps) => {
 				/>
 				<label htmlFor="price-range-4">More than $200</label>
 			</div>
-		</>
+		</div>
 	);
 };
 
