@@ -26,10 +26,7 @@ const MainList = ({ products }: MainListProps) => {
 		}
 	};
 
-	console.log(products, "products on load");
-	console.log(selectedCategories, "cats");
-	console.log(selectedProducts, "selectedProducts");
-
+	// initial load
 	useEffect(() => {
 		setSelectedProducts(products);
 	}, [products]);
