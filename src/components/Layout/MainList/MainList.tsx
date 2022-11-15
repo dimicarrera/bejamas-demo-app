@@ -13,6 +13,8 @@ export type MainListProps = {
 const MainList = ({ products }: MainListProps) => {
 	const [selectedProducts, setSelectedProducts] = useState<IProduct[]>([]);
 	const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+	// todo: add pricerange state
+	// todo: add sorting
 
 	const categoryHandler = (cat: string) => {
 		// add selected category to the list
@@ -46,7 +48,7 @@ const MainList = ({ products }: MainListProps) => {
 	}, [products, selectedCategories]);
 
 	return (
-		<>
+		<section>
 			<MainListHeader />
 			<div className="flex justify-between">
 				<MainListFiltering
@@ -55,7 +57,7 @@ const MainList = ({ products }: MainListProps) => {
 				/>
 				<MainListItems products={selectedProducts} />
 			</div>
-		</>
+		</section>
 	);
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const MainListHeader = () => {
 	return (
-		<div>
+		<header>
 			<h3>
 				Photography / <span>Premium Photos</span>
 			</h3>
@@ -16,7 +16,7 @@ const MainListHeader = () => {
 					<option value="2">Name</option>
 				</select>
 			</span>
-		</div>
+		</header>
 	);
 };
 

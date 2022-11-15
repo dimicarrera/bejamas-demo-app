@@ -4,8 +4,8 @@ import { IProduct } from "../../../models";
 
 const MainListItemCard = ({ product }: { product: IProduct }) => {
 	return (
-		<div className="flex flex-col justify-between">
-			<div className="max-h-96 h-full">
+		<div className="flex flex-col">
+			<div className="h-96">
 				<img
 					src={product.image.src}
 					alt={product.image.alt}
