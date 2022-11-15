@@ -1,11 +1,19 @@
 import React from "react";
+import { IProduct } from "../../../models";
 
-import { MainListProps } from "./MainList";
+type MainListFilteringProps = {
+	products: IProduct[];
+	categoryHandler: (cat: string) => void;
+};
 
-const MainListFiltering = ({ products }: MainListProps) => {
+const MainListFiltering = ({
+	products,
+	categoryHandler,
+}: MainListFilteringProps) => {
 	const uniqueCategories = Array.from(
 		new Set(products?.map((product) => product.category))
 	);
+
 	return (
 		<div className="flex flex-col">
 			<div>
@@ -16,6 +24,7 @@ const MainListFiltering = ({ products }: MainListProps) => {
 							type="checkbox"
 							name={cat}
 							id={cat}
+							onChange={() => categoryHandler(cat)}
 						/>
 						<label htmlFor={cat}>{cat}</label>
 					</div>

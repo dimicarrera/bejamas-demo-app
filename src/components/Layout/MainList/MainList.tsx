@@ -1,25 +1,62 @@
-import React, { useContext } from "react";
+import React, { useState, useEffect } from "react";
 
 import MainListHeader from "./MainListHeader";
 import MainListFiltering from "./MainListFiltering";
 import MainListItems from "./MainListItems";
 
 import { IProduct } from "../../../models";
-import { DataContext } from "../../../context/DataContext";
 
 export type MainListProps = {
 	products: IProduct[];
 };
 
-const MainList = () => {
-	const { items } = useContext(DataContext);
+const MainList = ({ products }: MainListProps) => {
+	const [selectedProducts, setSelectedProducts] = useState<IProduct[]>([]);
+	const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+
+	const categoryHandler = (cat: string) => {
+		// add selected category to the list
+		setSelectedCategories((selectedCategories) => [...selectedCategories, cat]);
+		// if selected category is already there
+		if (selectedCategories.includes(cat)) {
+			// delete it from the list
+			setSelectedCategories(
+				[...selectedCategories].filter((item) => item !== cat)
+			);
+		}
+	};
+
+	console.log(products, "products on load");
+	console.log(selectedCategories, "cats");
+	console.log(selectedProducts, "selectedProducts");
+
+	useEffect(() => {
+		setSelectedProducts(products);
+	}, [products]);
+
+	useEffect(() => {
+		// pick specific products with selected categories
+		const sProducts = products.filter((item) => {
+			return selectedCategories.some((cat) => item.category.includes(cat));
+		});
+
+		setSelectedProducts(sProducts);
+
+		// if no filter is selected
+		if (selectedCategories.length === 0) {
+			setSelectedProducts(products)
+		}
+	}, [products, selectedCategories]);
 
 	return (
 		<>
 			<MainListHeader />
 			<div className="flex justify-between">
-				<MainListFiltering products={items} />
-				<MainListItems products={items} />
+				<MainListFiltering
+					products={products}
+					categoryHandler={categoryHandler}
+				/>
+				<MainListItems products={selectedProducts} />
 			</div>
 		</>
 	);
