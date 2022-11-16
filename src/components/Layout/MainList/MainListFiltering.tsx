@@ -27,7 +27,7 @@ const MainListFiltering = ({
 		<div className="flex flex-col">
 			<div>
 				<h4>Category</h4>
-				{uniqueCategories?.map((cat) => (
+				{uniqueCategories?.sort().map((cat) => (
 					<div key={cat}>
 						<input
 							type="checkbox"

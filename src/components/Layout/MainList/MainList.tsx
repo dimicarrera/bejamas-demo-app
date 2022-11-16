@@ -14,7 +14,8 @@ const MainList = ({ products }: MainListProps) => {
 	const [selectedProducts, setSelectedProducts] = useState<IProduct[]>([]);
 	const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 	const [selectedRange, setSelectedRange] = useState<number[]>([0, Infinity]);
-	// todo: add sorting
+	const [selectedSorting, setSelectedSorting] = useState("price");
+	const [sortingDirection, setSortingDirection] = useState("");
 
 	const categoryHandler = (cat: string) => {
 		// add selected category to the list
@@ -35,6 +36,15 @@ const MainList = ({ products }: MainListProps) => {
 		if (idx === 3) setSelectedRange([200, Infinity]);
 	};
 
+	const sortingDirectionHandler = (value: string) => {
+		console.log(sortingDirection, "sortingDirection in fn");
+		setSortingDirection(value);
+	};
+
+	const sortingTypeHandler = (value: string) => {
+		setSelectedSorting(value);
+	};
+
 	// initial load
 	useEffect(() => {
 		setSelectedProducts(products);
@@ -47,10 +57,11 @@ const MainList = ({ products }: MainListProps) => {
 				selectedCategories.some((cat) => item.category.includes(cat))
 			)
 			.filter(
-				(item) => selectedRange[0] < item.price && item.price < selectedRange[1]
+				(item) =>
+					selectedRange[0] <= item.price && item.price <= selectedRange[1]
 			);
 
-		setSelectedProducts(filteredProducts)
+		setSelectedProducts(filteredProducts);
 
 		// if no filter is selected
 		if (selectedCategories.length === 0) {
@@ -58,9 +69,37 @@ const MainList = ({ products }: MainListProps) => {
 		}
 	}, [products, selectedCategories, selectedRange]);
 
+	useEffect(() => {
+		let sorted: IProduct[] = [];
+		switch (true) {
+			case selectedSorting === "price" && sortingDirection === "asc":
+				sorted = selectedProducts.sort((a, b) => a.price - b.price);
+				setSelectedProducts([...sorted]);
+				break;
+			case selectedSorting === "price" && sortingDirection === "desc":
+				sorted = selectedProducts.sort((a, b) => b.price - a.price);
+				setSelectedProducts([...sorted]);
+				break;
+			case selectedSorting === "name" && sortingDirection === "asc":
+				sorted = selectedProducts.sort((a, b) => a.name.localeCompare(b.name));
+				setSelectedProducts([...sorted]);
+				break;
+			case selectedSorting === "name" && sortingDirection === "desc":
+				sorted = selectedProducts.sort((a, b) => b.name.localeCompare(a.name));
+				setSelectedProducts([...sorted]);
+				break;
+
+			default:
+				break;
+		}
+	}, [selectedSorting, sortingDirection]);
+
 	return (
-		<section>
-			<MainListHeader />
+		<section className="my-10">
+			<MainListHeader
+				sortingTypeHandler={sortingTypeHandler}
+				sortingDirectionHandler={sortingDirectionHandler}
+			/>
 			<div className="flex justify-between">
 				<MainListFiltering
 					products={products}

@@ -1,21 +1,43 @@
 import React from "react";
 
-const MainListHeader = () => {
+import { ReactComponent as ArrowUp } from "../../../images/arrowUp.svg";
+import { ReactComponent as ArrowDown } from "../../../images/arrowDown.svg";
+
+const MainListHeader = ({
+	sortingTypeHandler,
+	sortingDirectionHandler,
+}: {
+	sortingTypeHandler: (value: string) => void;
+	sortingDirectionHandler: (value: string) => void;
+}) => {
 	return (
-		<header>
+		<header className="flex justify-between py-8">
 			<h3>
 				Photography / <span>Premium Photos</span>
 			</h3>
-			<span>
-				<span>Sort By</span>
+			<div className="flex">
+				<div className="flex mr-4">
+					<ArrowUp
+						fill="gray"
+						className="cursor-pointer"
+						onClick={() => sortingDirectionHandler("asc")}
+					/>
+					<ArrowDown
+						fill="gray"
+						className="cursor-pointer"
+						onClick={() => sortingDirectionHandler("desc")}
+					/>
+				</div>
+				<span className="text-gray-500">Sort By</span>
 				<select
 					name="photos-sorting"
 					id="photos-sorting"
+					onChange={(e) => sortingTypeHandler(e.target.value)}
 				>
-					<option value="1">Price</option>
-					<option value="2">Name</option>
+					<option value="price">Price</option>
+					<option value="name">Name</option>
 				</select>
-			</span>
+			</div>
 		</header>
 	);
 };
