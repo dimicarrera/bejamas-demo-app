@@ -13,7 +13,7 @@ export type MainListProps = {
 const MainList = ({ products }: MainListProps) => {
 	const [selectedProducts, setSelectedProducts] = useState<IProduct[]>([]);
 	const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-	// todo: add pricerange state
+	const [selectedRange, setSelectedRange] = useState<number[]>([0, Infinity]);
 	// todo: add sorting
 
 	const categoryHandler = (cat: string) => {
@@ -28,6 +28,13 @@ const MainList = ({ products }: MainListProps) => {
 		}
 	};
 
+	const priceRangeHandler = (idx: number) => {
+		if (idx === 0) setSelectedRange([0, 20]);
+		if (idx === 1) setSelectedRange([20, 100]);
+		if (idx === 2) setSelectedRange([100, 200]);
+		if (idx === 3) setSelectedRange([200, Infinity]);
+	};
+
 	// initial load
 	useEffect(() => {
 		setSelectedProducts(products);
@@ -35,17 +42,21 @@ const MainList = ({ products }: MainListProps) => {
 
 	useEffect(() => {
 		// pick specific products with selected categories
-		const sProducts = products.filter((item) => {
-			return selectedCategories.some((cat) => item.category.includes(cat));
-		});
+		const filteredProducts = products
+			.filter((item) =>
+				selectedCategories.some((cat) => item.category.includes(cat))
+			)
+			.filter(
+				(item) => selectedRange[0] < item.price && item.price < selectedRange[1]
+			);
 
-		setSelectedProducts(sProducts);
+		setSelectedProducts(filteredProducts)
 
 		// if no filter is selected
 		if (selectedCategories.length === 0) {
-			setSelectedProducts(products)
+			setSelectedProducts(products);
 		}
-	}, [products, selectedCategories]);
+	}, [products, selectedCategories, selectedRange]);
 
 	return (
 		<section>
@@ -54,6 +65,7 @@ const MainList = ({ products }: MainListProps) => {
 				<MainListFiltering
 					products={products}
 					categoryHandler={categoryHandler}
+					priceRangeHandler={priceRangeHandler}
 				/>
 				<MainListItems products={selectedProducts} />
 			</div>

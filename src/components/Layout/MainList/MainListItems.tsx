@@ -15,6 +15,9 @@ const MainListItems = ({ products }: MainListProps) => {
 						product={product}
 					/>
 				))}
+				{products.length === 0 && (
+					<p>No items available with your search criteria</p>
+				)}
 			</div>
 			<MainListPagination />
 		</div>

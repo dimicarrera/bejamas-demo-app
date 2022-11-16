@@ -4,15 +4,24 @@ import { IProduct } from "../../../models";
 type MainListFilteringProps = {
 	products: IProduct[];
 	categoryHandler: (cat: string) => void;
+	priceRangeHandler: (idx: number) => void;
 };
 
 const MainListFiltering = ({
 	products,
 	categoryHandler,
+	priceRangeHandler,
 }: MainListFilteringProps) => {
 	const uniqueCategories = Array.from(
 		new Set(products?.map((product) => product.category))
 	);
+
+	const priceRanges = [
+		"Lower than $20",
+		"$20 - $100",
+		"$100 - $200",
+		"More than $200",
+	];
 
 	return (
 		<div className="flex flex-col">
@@ -32,33 +41,18 @@ const MainListFiltering = ({
 			</div>
 			<div>
 				<h4>Price range</h4>
-				<input
-					type="radio"
-					name="price-range"
-					id="price-range-1"
-				/>
-				<label htmlFor="price-range-1">Lower than $20</label>
-				<br />
-				<input
-					type="radio"
-					name="price-range"
-					id="price-range-2"
-				/>
-				<label htmlFor="price-range-2">$20 - $100</label>
-				<br />
-				<input
-					type="radio"
-					name="price-range"
-					id="price-range-3"
-				/>
-				<label htmlFor="price-range-3">$100 - $200</label>
-				<br />
-				<input
-					type="radio"
-					name="price-range"
-					id="price-range-4"
-				/>
-				<label htmlFor="price-range-4">More than $200</label>
+				{priceRanges.map((range, idx) => (
+					<div key={idx}>
+						<input
+							type="radio"
+							name="price-range"
+							id={`price-range-${idx}`}
+							onChange={() => priceRangeHandler(idx)}
+						/>
+						<label htmlFor={`price-range-${idx}`}>{range}</label>
+						<br />
+					</div>
+				))}
 			</div>
 		</div>
 	);
