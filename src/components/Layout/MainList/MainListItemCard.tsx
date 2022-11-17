@@ -1,26 +1,35 @@
 import React from "react";
 
-import { IProduct } from "../../../models";
+import { IProduct, ICartItem } from "../../../models";
 
-const MainListItemCard = ({ product }: { product: IProduct }) => {
+type MainListItemCardProps = {
+	product: IProduct;
+	addToCart: (item: ICartItem) => void;
+};
+
+const MainListItemCard = ({ product, addToCart }: MainListItemCardProps) => {
+	const { image, category, name, currency, price } = product;
 	return (
 		<div className="flex flex-col">
 			<div className="h-96">
 				<img
-					src={product.image.src}
-					alt={product.image.alt}
+					src={image.src}
+					alt={image.alt}
 					className="object-cover min-h-full max-h-full w-full"
 				/>
 			</div>
 			<>
-				<button className="w-full bg-black text-white uppercase py-3">
+				<button
+					className="w-full bg-black text-white uppercase py-3"
+					onClick={() => addToCart({ name, currency, price, image })}
+				>
 					Add to cart
 				</button>
-				<p>{product.category}</p>
-				<p>{product.name}</p>
+				<p>{category}</p>
+				<p>{name}</p>
 				<p>
-					{product.currency}
-					{product.price}
+					{currency}
+					{price}
 				</p>
 			</>
 		</div>

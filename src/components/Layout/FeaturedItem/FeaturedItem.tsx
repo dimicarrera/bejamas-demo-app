@@ -1,23 +1,39 @@
 import React from "react";
 
-import { IProduct } from "../../../models";
 import FeaturedItemHeader from "./FeaturedItemHeader";
 import FeaturedItemBody from "./FeaturedItemBody";
 
+import { IProduct, ICartItem } from "../../../models";
+
 export type FeaturedItemProps = {
 	featured: IProduct[];
+	addToCart: (item: ICartItem) => void;
 };
 
-const FeaturedItem = ({ featured }: FeaturedItemProps) => {
+const FeaturedItem = ({ featured, addToCart }: FeaturedItemProps) => {
 	if (featured.length === 1) {
 		const { name, category, price, currency, dimensions, image, details } =
 			featured[0];
 
 		return (
 			<section>
-				<FeaturedItemHeader name={name} price={price} currency={currency} />
-				<img src={image.src} alt={image.alt} />
-				<FeaturedItemBody name={name} category={category} details={details} dimensions={dimensions} />
+				<FeaturedItemHeader
+					name={name}
+					price={price}
+					currency={currency}
+					image={image}
+					addToCart={addToCart}
+				/>
+				<img
+					src={image.src}
+					alt={image.alt}
+				/>
+				<FeaturedItemBody
+					name={name}
+					category={category}
+					details={details}
+					dimensions={dimensions}
+				/>
 			</section>
 		);
 	} else {

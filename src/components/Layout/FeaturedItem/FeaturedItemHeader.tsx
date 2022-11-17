@@ -1,16 +1,29 @@
 import React from "react";
 
-type FeaturedItemHeaderProps = {
-	name: string,
-	price: number,
-	currency: string
-}
+import { ICartItem } from "../../../models";
 
-const FeaturedItemHeader = ({ name, price, currency }: FeaturedItemHeaderProps) => {
+type FeaturedItemHeaderProps = {
+	name: string;
+	price: number;
+	currency: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+	addToCart: (item: ICartItem) => void;
+};
+
+const FeaturedItemHeader = ({
+	name,
+	price,
+	currency,
+	image,
+	addToCart,
+}: FeaturedItemHeaderProps) => {
 	return (
 		<header className="flex justify-between">
 			<h3>{name}</h3>
-      <button>Add to cart</button>
+			<button onClick={() => addToCart({name, price, currency, image })}>Add to cart</button>
 		</header>
 	);
 };

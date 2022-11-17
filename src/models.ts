@@ -22,3 +22,13 @@ export interface IProduct {
     }[]
   }
 }
+
+export interface ICartItem {
+	name: string;
+	price: number;
+	currency: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+}

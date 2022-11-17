@@ -6,13 +6,14 @@ import MainListFiltering from "./MainListFiltering";
 import MainListItemCard from "./MainListItemCard";
 import MainListPagination from "./MainListPagination";
 
-import { IProduct } from "../../../models";
+import { IProduct, ICartItem } from "../../../models";
 
 export type MainListProps = {
 	products: IProduct[];
+	addToCart: (item: ICartItem) => void;
 };
 
-const MainList = ({ products }: MainListProps) => {
+const MainList = ({ products, addToCart }: MainListProps) => {
 	const [selectedProducts, setSelectedProducts] = useState<IProduct[]>([]);
 	const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
 	const [selectedRange, setSelectedRange] = useState<number[]>([0, Infinity]);
@@ -66,8 +67,8 @@ const MainList = ({ products }: MainListProps) => {
 		if (idx === 3) setSelectedRange([200, Infinity]);
 	};
 
-	// set up sorting 
-	const sortingDirectionHandler = (value: "asc" | "desc" | "") => { 
+	// set up sorting
+	const sortingDirectionHandler = (value: "asc" | "desc" | "") => {
 		setSortingDirection(value);
 	};
 
@@ -153,6 +154,7 @@ const MainList = ({ products }: MainListProps) => {
 							<MainListItemCard
 								key={uuidv4()}
 								product={product}
+								addToCart={addToCart}
 							/>
 						))}
 						{currentItems.length === 0 && (
