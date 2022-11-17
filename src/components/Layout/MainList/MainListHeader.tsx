@@ -8,7 +8,7 @@ const MainListHeader = ({
 	sortingDirectionHandler,
 }: {
 	sortingTypeHandler: (value: string) => void;
-	sortingDirectionHandler: (value: string) => void;
+	sortingDirectionHandler: (value: "asc" | "desc" | "") => void;
 }) => {
 	return (
 		<header className="flex justify-between py-8">

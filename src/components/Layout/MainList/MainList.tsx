@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import MainListHeader from "./MainListHeader";
 import MainListFiltering from "./MainListFiltering";
-import MainListItems from "./MainListItems";
+import MainListItemCard from "./MainListItemCard";
+import MainListPagination from "./MainListPagination";
 
 import { IProduct } from "../../../models";
 
@@ -16,7 +18,34 @@ const MainList = ({ products }: MainListProps) => {
 	const [selectedRange, setSelectedRange] = useState<number[]>([0, Infinity]);
 	const [selectedSorting, setSelectedSorting] = useState("price");
 	const [sortingDirection, setSortingDirection] = useState("");
+	const [currentPage, setCurrentPage] = useState(1);
 
+	// set up pagination
+	const paginationItemsPerPage = 6;
+	const lastItemIdx = currentPage * paginationItemsPerPage;
+	const firstItemIdx = lastItemIdx - paginationItemsPerPage;
+	const currentItems = selectedProducts.slice(firstItemIdx, lastItemIdx);
+	const pagesCount = Math.ceil(
+		selectedProducts.length / paginationItemsPerPage
+	);
+
+	const handlePageClick = (pageNumber: number) => {
+		setCurrentPage(pageNumber);
+	};
+
+	const handlePrevClick = () => {
+		if (currentPage !== 1) {
+			setCurrentPage((prev) => prev - 1);
+		} else return;
+	};
+
+	const handleNextClick = () => {
+		if (currentPage !== pagesCount) {
+			setCurrentPage((prev) => prev + 1);
+		} else return;
+	};
+
+	// set up category filter
 	const categoryHandler = (cat: string) => {
 		// add selected category to the list
 		setSelectedCategories((selectedCategories) => [...selectedCategories, cat]);
@@ -29,6 +58,7 @@ const MainList = ({ products }: MainListProps) => {
 		}
 	};
 
+	// set up price range filter
 	const priceRangeHandler = (idx: number) => {
 		if (idx === 0) setSelectedRange([0, 20]);
 		if (idx === 1) setSelectedRange([20, 100]);
@@ -36,8 +66,8 @@ const MainList = ({ products }: MainListProps) => {
 		if (idx === 3) setSelectedRange([200, Infinity]);
 	};
 
-	const sortingDirectionHandler = (value: string) => {
-		console.log(sortingDirection, "sortingDirection in fn");
+	// set up sorting 
+	const sortingDirectionHandler = (value: "asc" | "desc" | "") => { 
 		setSortingDirection(value);
 	};
 
@@ -50,6 +80,7 @@ const MainList = ({ products }: MainListProps) => {
 		setSelectedProducts(products);
 	}, [products]);
 
+	// handle filtering effects
 	useEffect(() => {
 		// pick specific products with selected categories
 		const filteredProducts = products
@@ -69,6 +100,7 @@ const MainList = ({ products }: MainListProps) => {
 		}
 	}, [products, selectedCategories, selectedRange]);
 
+	// handle sorting effects
 	useEffect(() => {
 		let sorted: IProduct[] = [];
 		switch (true) {
@@ -92,7 +124,16 @@ const MainList = ({ products }: MainListProps) => {
 			default:
 				break;
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [selectedSorting, sortingDirection]);
+
+	// scroll to the top when picking a page
+	useEffect(() => {
+		window.scrollTo({
+			behavior: "smooth",
+			top: 0,
+		});
+	}, [currentPage]);
 
 	return (
 		<section className="my-10">
@@ -106,7 +147,26 @@ const MainList = ({ products }: MainListProps) => {
 					categoryHandler={categoryHandler}
 					priceRangeHandler={priceRangeHandler}
 				/>
-				<MainListItems products={selectedProducts} />
+				<div className="flex basis-8/12 flex-col">
+					<div className="grid grid-cols-3 gap-8">
+						{currentItems?.map((product) => (
+							<MainListItemCard
+								key={uuidv4()}
+								product={product}
+							/>
+						))}
+						{currentItems.length === 0 && (
+							<p>No items available with your search criteria</p>
+						)}
+					</div>
+					<MainListPagination
+						pagesCount={pagesCount}
+						currentPage={currentPage}
+						handlePrevClick={handlePrevClick}
+						handleNextClick={handleNextClick}
+						handlePageClick={handlePageClick}
+					/>
+				</div>
 			</div>
 		</section>
 	);
