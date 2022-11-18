@@ -18,30 +18,44 @@ const CartDropdown = ({
 }: CartDropdownProps) => {
 	console.log(cartItems, "citems");
 	return (
-		<div>
-			<div>
-				<Close
-					className="cursor-pointer"
-					onClick={closeDropdown}
-				/>
+		<div className="border-gray-200 border-4 p-6 max-w-md w-full absolute bg-white right-0 top-32">
+			<Close
+				className="cursor-pointer ml-auto"
+				onClick={closeDropdown}
+			/>
+			<div className="flex flex-col">
+				{cartItems.map((item) => (
+					<div
+						key={uuidv4()}
+						className="py-4 flex"
+					>
+						<div>
+							<p className="font-bold text-xl pb-2">{item.name}</p>
+							<p className="text-gray-600 text-3xl">
+								{item.currency}
+								{item.price}
+							</p>
+						</div>
+						<div className="w-36 h-20 ml-auto">
+							<img
+								src={item.image.src}
+								alt={item.image.alt}
+								className="object-contain h-full w-full"
+							/>
+						</div>
+					</div>
+				))}
 			</div>
-			{cartItems.map((item) => (
-				<div key={uuidv4()}>
-					<div>
-						<p>{item.name}</p>
-						<p>
-							{item.currency} {item.price}
-						</p>
-					</div>
-					<div>
-						<img
-							src={item.image.src}
-							alt={item.image.alt}
-						/>
-					</div>
-				</div>
-			))}
-			<button onClick={() => clearCart()}>Clear</button>
+			{cartItems.length === 0 && (
+				<p className="text-center font-bold text-2xl">No items to display</p>
+			)}
+			<hr className="border-gray-500 my-6" />
+			<button
+				className="w-full text-black font-medium uppercase py-3 outline outline-3 outline-black tracking-widest"
+				onClick={() => clearCart()}
+			>
+				Clear
+			</button>
 		</div>
 	);
 };

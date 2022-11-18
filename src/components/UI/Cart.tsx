@@ -18,8 +18,8 @@ const Cart = ({ cartItemsCount, openDropdown }: CartProps) => {
 				alt="Cart Icon"
 				className="w-12"
 			/>
-			<div className="bg-black text-white text-center p-0 w-6 absolute left-9 top-11">
-				{cartItemsCount}
+			<div className="bg-black text-white text-center p-0 w-5 absolute left-9 top-11">
+				<p style={{margin: 0, fontWeight: 700, lineHeight: 1.3}}>{cartItemsCount}</p>
 			</div>
 		</div>
 	);

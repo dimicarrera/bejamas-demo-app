@@ -4,7 +4,6 @@ import Layout from "./components/Layout/Layout";
 import Header from "./components/Layout/Header";
 import FeaturedItem from "./components/Layout/FeaturedItem/FeaturedItem";
 import MainList from "./components/Layout/MainList/MainList";
-import CartDropdown from "./components/Layout/CartDropdown";
 
 import useProducts from "./hooks/products";
 import { IProduct, ICartItem } from "./models";
@@ -40,14 +39,10 @@ function App() {
 			<Header
 				cartItems={cartItems}
 				openDropdown={openDropdown}
+				closeDropdown={closeDropdown}
+				displayCart={displayCart}
+				clearCart={clearCart}
 			/>
-			{displayCart && (
-				<CartDropdown
-					clearCart={clearCart}
-					cartItems={cartItems}
-					closeDropdown={closeDropdown}
-				/>
-			)}
 			<FeaturedItem
 				featured={featured}
 				addToCart={addToCart}
