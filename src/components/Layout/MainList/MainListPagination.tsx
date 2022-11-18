@@ -41,8 +41,6 @@ const MainListPagination = (props: MainListPaginationProps) => {
 		);
 	});
 
-	console.log(currentPage, pagesCount, "c p");
-
 	return (
 		<nav className="my-8 self-center">
 			<ul className="flex items-center">
