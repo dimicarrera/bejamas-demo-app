@@ -30,7 +30,7 @@ const MainListFiltering = ({
 				{uniqueCategories?.sort().map((cat) => (
 					<div
 						key={cat}
-						className="flex items-center"
+						className="flex items-center mb-3"
 					>
 						<input
 							type="checkbox"
@@ -52,7 +52,7 @@ const MainListFiltering = ({
 			<div>
 				<h6 className="font-bold text-xl mb-6">Price range</h6>
 				{priceRanges.map((range, idx) => (
-					<div key={idx}>
+					<div key={idx} className="mb-3">
 						<input
 							type="radio"
 							name="price-range"

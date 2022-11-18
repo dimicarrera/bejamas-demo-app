@@ -148,7 +148,7 @@ const MainList = ({ products, addToCart }: MainListProps) => {
 					categoryHandler={categoryHandler}
 					priceRangeHandler={priceRangeHandler}
 				/>
-				<div className="flex basis-8/12 flex-col">
+				<div className="flex basis-9/12 flex-col">
 					<div className="grid grid-cols-3 gap-8">
 						{currentItems?.map((product) => (
 							<MainListItemCard
@@ -157,10 +157,12 @@ const MainList = ({ products, addToCart }: MainListProps) => {
 								addToCart={addToCart}
 							/>
 						))}
-						{currentItems.length === 0 && (
-							<p>No items available with your search criteria</p>
-						)}
 					</div>
+					{currentItems.length === 0 && (
+						<p className="text-center font-bold text-2xl py-12">
+							No items available with your search criteria
+						</p>
+					)}
 					<MainListPagination
 						pagesCount={pagesCount}
 						currentPage={currentPage}
