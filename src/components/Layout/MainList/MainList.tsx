@@ -128,14 +128,6 @@ const MainList = ({ products, addToCart }: MainListProps) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [selectedSorting, sortingDirection]);
 
-	// scroll to the top when picking a page
-	useEffect(() => {
-		window.scrollTo({
-			behavior: "smooth",
-			top: 0,
-		});
-	}, [currentPage]);
-
 	return (
 		<section className="my-10">
 			<MainListHeader
