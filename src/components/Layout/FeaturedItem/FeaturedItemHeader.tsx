@@ -20,6 +20,7 @@ const FeaturedItemHeader = ({
 	image,
 	addToCart,
 }: FeaturedItemHeaderProps) => {
+	
 	return (
 		<header className="flex justify-between mt-16 mb-8">
 			<h3 className="text-3xl font-bold">{name}</h3>

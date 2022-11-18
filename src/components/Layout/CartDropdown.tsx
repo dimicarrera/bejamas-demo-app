@@ -23,27 +23,30 @@ const CartDropdown = ({
 				onClick={closeDropdown}
 			/>
 			<div className="flex flex-col">
-				{cartItems.map((item) => (
-					<div
-						key={uuidv4()}
-						className="py-4 flex"
-					>
-						<div>
-							<p className="font-bold text-xl pb-2">{item.name}</p>
-							<p className="text-gray-600 text-3xl">
-								{item.currency}
-								{item.price}
-							</p>
+				{cartItems.map((item) => {
+					const formattedCurrency = item.currency.replace("USD", "$");
+					return (
+						<div
+							key={uuidv4()}
+							className="py-4 flex"
+						>
+							<div>
+								<p className="font-bold text-xl pb-2">{item.name}</p>
+								<p className="text-gray-600 text-3xl">
+									{formattedCurrency}
+									{item.price}
+								</p>
+							</div>
+							<div className="w-36 h-20 ml-auto">
+								<img
+									src={item.image.src}
+									alt={item.image.alt}
+									className="object-cover h-full w-full"
+								/>
+							</div>
 						</div>
-						<div className="w-36 h-20 ml-auto">
-							<img
-								src={item.image.src}
-								alt={item.image.alt}
-								className="object-cover h-full w-full"
-							/>
-						</div>
-					</div>
-				))}
+					);
+				})}
 			</div>
 			{cartItems.length === 0 && (
 				<p className="text-center font-bold text-2xl">No items to display</p>
