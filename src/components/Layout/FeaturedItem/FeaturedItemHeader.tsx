@@ -21,9 +21,9 @@ const FeaturedItemHeader = ({
 	addToCart,
 }: FeaturedItemHeaderProps) => {
 	return (
-		<header className="flex justify-between">
-			<h3>{name}</h3>
-			<button onClick={() => addToCart({name, price, currency, image })}>Add to cart</button>
+		<header className="flex justify-between mt-16 mb-8">
+			<h3 className="text-3xl font-bold">{name}</h3>
+			<button className="px-12 uppercase text-white font-medium bg-black tracking-widest" onClick={() => addToCart({name, price, currency, image })}>Add to cart</button>
 		</header>
 	);
 };

@@ -24,10 +24,15 @@ const FeaturedItem = ({ featured, addToCart }: FeaturedItemProps) => {
 					image={image}
 					addToCart={addToCart}
 				/>
-				<img
-					src={image.src}
-					alt={image.alt}
-				/>
+				<div className="relative">
+					<img
+						src={image.src}
+						alt={image.alt}
+						className="object-cover w-full"
+						style={{ aspectRatio: 2.33 / 1 }}
+					/>
+					<div className="absolute bg-white py-6 px-16 font-bold bottom-0">Photo of the day</div>
+				</div>
 				<FeaturedItemBody
 					name={name}
 					category={category}

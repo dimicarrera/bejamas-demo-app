@@ -24,39 +24,39 @@ const FeaturedItemBody = ({
 	details,
 }: FeaturedItemBodyProps) => {
 	return (
-		<div className="flex justify-between">
-			<div>
-				<h5>About the {name}</h5>
-				<span>{category}</span>
-				<p>{details?.description}</p>
+		<div className="flex justify-between my-8">
+			<div className="basis-1/2">
+				<h5 className="font-bold text-xl mb-4">About the {name}</h5>
+				<p className="font-bold text-xl text-gray-600 mb-4">{category}</p>
+				<p className="text-gray-600 leading-6">{details?.description}</p>
 			</div>
-			<div>
-				<h6>People also buy</h6>
-				<div className="flex">
+			<div className="basis-1/2 flex flex-col">
+				<h6 className="font-bold text-xl ml-auto mb-6">People also buy</h6>
+				<div className="flex ml-auto gap-6 mb-12">
 					<img
-						className="w-28"
+						className="w-28 h-36 object-cover"
 						src={details?.recommendations[0].src}
 						alt={details?.recommendations[0].alt}
 					/>
 					<img
-						className="w-28"
+						className="w-28 h-36 object-cover"
 						src={details?.recommendations[1].src}
 						alt={details?.recommendations[1].alt}
 					/>
 					<img
-						className="w-28"
+						className="w-28 h-36 object-cover"
 						src={details?.recommendations[2].src}
 						alt={details?.recommendations[2].alt}
 					/>
 				</div>
-				<div>
-					<h6>Details</h6>
+				<div className="flex flex-col">
+					<h6 className="font-bold text-xl text-right mb-6">Details</h6>
 					{dimensions && (
-						<span>
+						<p className="text-gray-600 mb-4 text-right">
 							Size: {dimensions?.width} x {dimensions?.height} pixel
-						</span>
+						</p>
 					)}
-					{details && <span>Size: {details?.size / 1024} mb</span>}
+					{details && <p className="text-gray-600 mb-4 text-right">Size: {details?.size / 1024} mb</p>}
 				</div>
 			</div>
 		</div>

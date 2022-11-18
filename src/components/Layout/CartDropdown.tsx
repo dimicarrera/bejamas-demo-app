@@ -18,7 +18,7 @@ const CartDropdown = ({
 }: CartDropdownProps) => {
 	console.log(cartItems, "citems");
 	return (
-		<div className="border-gray-200 border-4 p-6 max-w-md w-full absolute bg-white right-0 top-32">
+		<div className="border-gray-200 border-4 p-6 max-w-md w-full absolute bg-white right-0 top-32 z-10">
 			<Close
 				className="cursor-pointer ml-auto"
 				onClick={closeDropdown}
@@ -40,7 +40,7 @@ const CartDropdown = ({
 							<img
 								src={item.image.src}
 								alt={item.image.alt}
-								className="object-contain h-full w-full"
+								className="object-cover h-full w-full"
 							/>
 						</div>
 					</div>
