@@ -1,5 +1,8 @@
 import React from "react";
 
+import { ReactComponent as ArrowLeft } from "../../../images/arrowLeft.svg";
+import { ReactComponent as ArrowRight } from "../../../images/arrowRight.svg";
+
 type MainListPaginationProps = {
 	pagesCount: number;
 	currentPage: number;
@@ -42,11 +45,19 @@ const MainListPagination = (props: MainListPaginationProps) => {
 		<nav className="my-8 self-center">
 			<ul className="flex">
 				<li className="px-2 cursor-pointer text-black">
-					<button onClick={() => handlePrevClick()}>L</button>
+					{currentPage !== 1 && (
+						<button onClick={() => handlePrevClick()}>
+							<ArrowLeft />
+						</button>
+					)}
 				</li>
 				{pageNumbers}
 				<li className="px-2 cursor-pointer text-black">
-					<button onClick={() => handleNextClick()}>R</button>
+					{currentPage !== pagesCount && (
+						<button onClick={() => handleNextClick()}>
+							<ArrowRight />
+						</button>
+					)}
 				</li>
 			</ul>
 		</nav>
