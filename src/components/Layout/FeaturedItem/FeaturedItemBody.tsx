@@ -27,8 +27,10 @@ const FeaturedItemBody = ({
 		<div className="flex justify-between my-8">
 			<div className="basis-1/2">
 				<h5 className="font-bold text-xl mb-4">About the {name}</h5>
-				<p className="font-bold text-xl text-gray-600 mb-4">{category}</p>
-				<p className="text-gray-600 leading-6">{details?.description}</p>
+				<p className="font-bold text-xl text-gray-600 mb-4 capitalize">
+					{category}
+				</p>
+				<p className="text-gray-600 leading-7 text-lg">{details?.description}</p>
 			</div>
 			<div className="basis-1/2 flex flex-col">
 				<h6 className="font-bold text-xl ml-auto mb-6">People also buy</h6>
@@ -50,13 +52,17 @@ const FeaturedItemBody = ({
 					/>
 				</div>
 				<div className="flex flex-col">
-					<h6 className="font-bold text-xl text-right mb-6">Details</h6>
+					<h6 className="font-bold text-xl text-right mb-4">Details</h6>
 					{dimensions && (
-						<p className="text-gray-600 mb-4 text-right">
+						<p className="text-gray-600 mb-2 text-right">
 							Size: {dimensions?.width} x {dimensions?.height} pixel
 						</p>
 					)}
-					{details && <p className="text-gray-600 mb-4 text-right">Size: {details?.size / 1024} mb</p>}
+					{details && (
+						<p className="text-gray-600 mb-2 text-right">
+							Size: {Math.ceil(details?.size / 1024)} mb
+						</p>
+					)}
 				</div>
 			</div>
 		</div>
