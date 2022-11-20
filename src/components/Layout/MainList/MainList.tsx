@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import _ from "lodash";
 
 import MainListHeader from "./MainListHeader";
 import MainListFiltering from "./MainListFiltering";
@@ -83,22 +84,32 @@ const MainList = ({ products, addToCart }: MainListProps) => {
 
 	// handle filtering effects
 	useEffect(() => {
-		// pick specific products with selected categories
-		const filteredProducts = products
-			.filter((item) =>
-				selectedCategories.some((cat) => item.category.includes(cat))
-			)
-			.filter(
-				(item) =>
-					selectedRange[0] <= item.price && item.price <= selectedRange[1]
+		// pick specific products with either selected categories or selected price range
+		const filteredByCategoryProducts = products.filter((item) =>
+			selectedCategories.some((cat) => item.category.includes(cat))
+		);
+		const filteredbyPriceRangeProducts = products.filter(
+			(item) => selectedRange[0] <= item.price && item.price <= selectedRange[1]
+		);
+		
+		// if there are selected categories and/or price ranges, make a new array of them
+		let filteredProducts: IProduct[] = [];
+
+		if (
+			filteredByCategoryProducts.length > 0 &&
+			filteredbyPriceRangeProducts.length > 0
+		) {
+			filteredProducts = _.intersection(
+				filteredByCategoryProducts,
+				filteredbyPriceRangeProducts
 			);
+		} else if (filteredByCategoryProducts.length > 0) {
+			filteredProducts = filteredByCategoryProducts;
+		} else if (filteredbyPriceRangeProducts.length > 0) {
+			filteredProducts = filteredbyPriceRangeProducts;
+		}
 
 		setSelectedProducts(filteredProducts);
-
-		// if no filter is selected
-		if (selectedCategories.length === 0) {
-			setSelectedProducts(products);
-		}
 	}, [products, selectedCategories, selectedRange]);
 
 	// handle sorting effects
